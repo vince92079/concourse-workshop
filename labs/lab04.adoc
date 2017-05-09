@@ -144,7 +144,7 @@ jobs:
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ fly -t gcp set-pipeline -p pipeline-<LASTNAME> -c ci/pipeline.yml
+$ fly -t ci set-pipeline -p pipeline-<LASTNAME> -c ci/pipeline.yml
 ---------------------------------------------------------------------
 
 . You'll note your pipeline now steps (or jobs).  1) Unit test your code and 2) Package/Deploy your code.  Step #2 will only kickoff if Step #1 is successful
@@ -168,7 +168,7 @@ Compressing objects: 100% (6/6), done.
 Writing objects: 100% (7/7), 2.04 KiB | 0 bytes/s, done.
 Total 7 (delta 1), reused 0 (delta 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
-To git@github.com:azwickey-pivotal/concourse-workshop.git
+To git@github.com:nsagoo-pivotal/concourse-workshop.git
    b952fc5..623fdb6  master -> master
 ---------------------------------------------------------------------
 +

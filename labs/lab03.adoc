@@ -11,7 +11,7 @@ resources:
   type: git
   source:
     branch: master
-    uri: https://github.com/azwickey-pivotal/concourse-workshop
+    uri: https://github.com/nsagoo-pivotal/concourse-workshop
 ---------------------------------------------------------------------
 
 . Modify the previous "hello" job in the jobs section of the file to add a new task to the pipeline that will GET the git repository:
@@ -65,7 +65,7 @@ jobs:
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ fly -t gcp set-pipeline -p pipeline-<LASTNAME> -c pipeline.yml
+$ fly -t ci set-pipeline -p pipeline-<LASTNAME> -c pipeline.yml
 ---------------------------------------------------------------------
 
 . You'll note that when you update a pipeline the fly CLI response will highlight what has changed in the pipeline.

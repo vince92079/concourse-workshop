@@ -24,7 +24,7 @@ jobs:
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ fly -t gcp set-pipeline -p pipeline-<LASTNAME> -c pipeline.yml
+$ fly -t ci set-pipeline -p pipeline-<LASTNAME> -c pipeline.yml
 
 jobs:
   job hello has been added:
@@ -52,9 +52,9 @@ the pipeline is currently paused. to unpause, either:
   - click play next to the pipeline in the web ui
 ---------------------------------------------------------------------
 
-. You'll note the command informs us that initially our pipeline is in a paused state.  We could unpause from the commandline, but instead we'll unpause and execute the pipeline from the Concourse web UI.  In a browser navigate to http://concourse.run.cloud.zwickey.net/ and click the "login" link in the upper right corner.
+. You'll note the command informs us that initially our pipeline is in a paused state.  We could unpause from the commandline, but instead we'll unpause and execute the pipeline from the Concourse web UI.  In a browser navigate to http://concourse.pcfplatform.net/ and click the "login" link in the upper right corner.
 
-. Select the "main" team to login to and use the credentials previously provided to authenticate
+. Select your team to login and use the credentials previously provided to authenticate
 +
 image::login.png[]
 

@@ -2,7 +2,7 @@
 
 == Install FLY CLI
 
-. In a browser navigate to http://concourse.run.cloud.zwickey.net/ and select the icon associated with your platform:
+. In a browser navigate to http://concourse.pcfplatform.net/ and select the icon associated with your platform:
 +
 image::fly.png[]
 
@@ -13,7 +13,7 @@ image::fly.png[]
 [source,bash]
 ---------------------------------------------------------------------
 $ fly -version                                                                                                                                  1 ↵
-2.6.0
+2.7.0
 ---------------------------------------------------------------------
 
 == Target and Login to Concourse Env
@@ -22,14 +22,14 @@ $ fly -version                                                                  
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ fly --target gcp login --concourse-url http://concourse.cloud.zwickey.net:8080 --team-name Main
+$ fly --target ci login --concourse-url http://concourse.pcfplatform.net/ --team-name user<x>
 ---------------------------------------------------------------------
 
 . Execute the fly login command, entering the credentials again when prompted.
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ fly -t gcp login                                                                                                                              1 ↵
+$ fly -t ci login                                                                                                                              1 ↵
 username: admin
 password:
 
@@ -38,7 +38,7 @@ target saved
 
 == Create a GIT repository to hold your concourse pipeline and artifacts
 
-. Fork this git repository:  https://github.com/azwickey-pivotal/concourse-workshop
+. Fork this git repository:  https://github.com/nsagoo-pivotal/concourse-workshop
 
 . Clone this repository to your local desktop
 +

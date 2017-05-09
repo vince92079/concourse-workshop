@@ -19,7 +19,7 @@ run:
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ fly -t gcp execute -c pipeline.yml
+$ fly -t ci execute -c pipeline.yml
 executing build 79
 initializing
 running echo Hello, My first pipeline!

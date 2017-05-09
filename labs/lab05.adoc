@@ -2,13 +2,13 @@
 
 == SSH into a Concourse task to debug on server
 
-. Builds don't always run smoothly.  At times a developer or operator will need to debug a failing build.  Concourse provides the ability to SSH into a pipeline task in order to allow for troubleshooting and debugging.  You may do this using the _hijack_ CLI command.  The format is _hijack <PIPELINE-NAME>/<JOB_NAME>_
+. Builds don't always run smoothly.  At times a developer or operator will need to debug a failing build.  Concourse provides the ability to SSH into a pipeline task in order to allow for troubleshooting and debugging.  You may do this using the _intercept_ CLI command.  The format is _intercept <PIPELINE-NAME>/<JOB_NAME>_
 
 . SSH into one of your build tasks.  Replace <LASTNAME> with the name you used when naming your pipeline.  If you are presented with multiple tasks to log into choose the most recent build.
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ fly -t gcp hijack -j pipeline-<LASTNAME>/deploy
+$ fly -t ci intercept -j pipeline-<LASTNAME>/deploy
 
 1: build #5, step: mvn-package, type: task
 2: build #6, step: mvn-package, type: check

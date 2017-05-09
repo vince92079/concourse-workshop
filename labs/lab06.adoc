@@ -2,7 +2,7 @@
 
 == Push app to CF
 
-. Lastly, we want to deploy our application to Pivotal Cloudfoundry.  We'll add this to the _deploy_ task within our pipeline.  First, define a Cloudfoundry resource below the git-assets resource:
+. Lastly, we want to deploy our application to Pivotal Cloud Foundry.  We'll add this to the _deploy_ task within our pipeline.  First, define a Cloud Foundry resource below the git-assets resource:
 +
 [source,bash]
 ---------------------------------------------------------------------
@@ -45,7 +45,7 @@ resources:
   type: git
   source:
     branch: master
-    uri: https://github.com/azwickey-pivotal/concourse-workshop
+    uri: https://github.com/nsagoo-pivotal/concourse-workshop
 - name: cloudfoundry
   type: cf
   source:
@@ -90,6 +90,11 @@ jobs:
     path: app-output/concourse-demo.jar
 ---------------------------------------------------------------------
 
+[source,bash]
+---------------------------------------------------------------------
+$ fly -t ci set-pipeline -p pipeline-<LASTNAME> -c ci/pipeline.yml -l credentials.yml
+---------------------------------------------------------------------
+
 . If you refresh the Concourse web UI you'll note the resource output of _cloudfoundry_ has been added.
 +
 image::cf.png[]
@@ -102,6 +107,6 @@ image::cf1.png[]
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ curl http://concourse-demo-boot.apps.cloud.zwickey.net/version
+$ curl http://concourse-demo-boot.apps.pcfplatform.net/version
 0.0.9-SNAPSHOT
 ---------------------------------------------------------------------
