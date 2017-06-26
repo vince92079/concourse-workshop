@@ -22,14 +22,17 @@ $ fly -version                                                                  
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ fly --target ci login --concourse-url https://ci.pcfplatform.net/ -k --team-name <alpha,bravo,charlie,delta,echo>
+$ fly --target ci login \
+      --concourse-url https://ci.pcfplatform.net/ -k
+      --team-name <alpha,bravo,charlie,delta,echo>
 ---------------------------------------------------------------------
 
-. Execute the fly login command, entering the credentials again when prompted.
+. Username & password is the same as the team name.
 +
 [source,bash]
 ---------------------------------------------------------------------
-$ fly -t ci login                                                                                                                              1 ↵
+
+logging in to team ...                                                                                                                              1 ↵
 username: <alpha,bravo,charlie,delta,echo>
 password: <alpha,bravo,charlie,delta,echo>
 
