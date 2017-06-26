@@ -2,7 +2,7 @@
 
 == Install FLY CLI
 
-. In a browser navigate to http://concourse.pcfplatform.net/ and select the icon associated with your platform:
+. In a browser navigate to https://ci.pcfplatform.net/ and select the icon associated with your platform:
 +
 image::fly.png[]
 
